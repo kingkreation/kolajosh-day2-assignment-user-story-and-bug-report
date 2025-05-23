@@ -4,85 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>QA Assignment - User Story & Bug Report</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      margin: 0;
-      padding: 20px;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      text-align: center;
-    }
-    .profile {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .profile img {
-      width: 100px; /* Adjust size as needed */
-      height: 100px; /* Adjust size as needed */
-      border-radius: 50%; /* Circular frame */
-      margin-right: 20px; /* Space between image and text */
-    }
-    .profile-info {
-      text-align: left;
-    }
-    .image-section img {
-      width: 100%;
-      margin: 10px 0;
-      border-radius: 8px;
-    }
-    .embed-section, .download {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .download a {
-      padding: 10px 20px;
-      background: #0073b1;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      margin-top: 20px;
-    }
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 0.9em;
-      color: #777;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <header>
+    <h1>Software Testing Assignment</h1>
+  </header>
   <div class="container">
     <div class="profile">
-      <img src="your-profile-picture.png" alt="Profile Picture" /> <!-- Replace with the path to your picture -->
+      <img src="your-profile-picture.png" alt="Profile Picture" />
       <div class="profile-info">
         <h2>Kolawole Joshua</h2>
         <p>Registration Number: TSB-TTST-B1-067</p>
       </div>
     </div>
     
-    <h1>Software Testing Assignment</h1>
     <h2>User Stories</h2>
     <div class="image-section">
-      <img src="user-story-1.png" alt="User Story Page 1" />
-      <img src="user-story-2.png" alt="User Story Page 2" />
-      <img src="user-story-3.png" alt="User Story Page 3" />
+      <img src="user-story-1.png" alt="Screenshot of User Story Page 1" class="lightbox" />
+      <img src="user-story-2.png" alt="Screenshot of User Story Page 2" class="lightbox" />
+      <img src="user-story-3.png" alt="Screenshot of User Story Page 3" class="lightbox" />
     </div>
 
     <h2>Bug Report</h2>
@@ -90,14 +34,17 @@
       <iframe src="https://docs.google.com/spreadsheets/d/1lm7Ed-6g3QIFs00y7GaacltxixqwRnOuBMN7TdtsujU/edit?usp=sharing"></iframe>
     </div>
     <div class="download">
-      <!-- Fallback download link -->
       <a href="bug-report.xlsx" download>Download Bug Report (Excel)</a>
     </div>
 
     <footer>
-      Created by <a href="https://www.linkedin.com/in/joshua-kolawole-40062a287" target="_blank">Kolawole Joshua O.</a>
+      Created by <a href="https://www.linkedin.com/in/joshua-kolawole-40062a287" target="_blank" rel="noopener noreferrer">Kolawole Joshua O.</a>
     </footer>
+  </div>
 
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox-modal">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
   </div>
 </body>
-</html>
